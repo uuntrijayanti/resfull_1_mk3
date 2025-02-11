@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Order; // Mengimpor model Order
+use App\Models\Product;
+use App\Models\Order; 
+use App\Models\Customer;
 
 class OrdersController extends Controller
 {

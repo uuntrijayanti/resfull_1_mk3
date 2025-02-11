@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\CustomerController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -25,6 +27,12 @@ Route::put('/products/{id}', [ProductController::class, 'update']);
 Route::delete('/products/{id}', [ProductController::class, 'destroy']);
 
 
-Route::get('/Orders', [OrdersController::class, 'index']);
-Route::post('/Orders', [OrdersController::class, 'store']);
-Route::delete('Orders/{id}', [OrdersController::class, 'destroy']);
+Route::get('/orders', [OrdersController::class, 'index']);
+Route::post('/orders', [OrdersController::class, 'store']);
+Route::put('/orders/{id}', [OrdersController::class, 'update']);
+Route::delete('orders/{id}', [OrdersController::class, 'destroy']);
+
+Route::get('/customers', [CustomerController::class, 'index']);
+Route::post('/customers', [CustomerController::class, 'store']);
+Route::put('/customers', [CustomerController::class, 'update']);
+Route::delete('/customers', [CustomerController::class, 'destroy']);
